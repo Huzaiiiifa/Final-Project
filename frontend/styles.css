@@ -1,0 +1,381 @@
+/* ===== Reset & Body ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: #ffffff;
+    background: #0f0f0f; /* default for products, contact, login pages */
+    padding-top: 70px; /* space for sticky header */
+    line-height: 1.6;
+}
+
+/* ===== Homepage Background ===== */
+body.homepage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('headphones.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ===== Sticky Header ===== */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #161616;
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: #4caf50;
+}
+
+/* Navigation Links */
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #4caf50;
+}
+
+/* Menu toggle for mobile (optional) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ===== Home Button (optional) ===== */
+.home-btn {
+    position: absolute;
+    left: 20px;
+    top: 12px;
+    background: #4caf50;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.home-btn:hover {
+    background: #45a044;
+}
+
+/* ===== HERO SECTION (Homepage Only) ===== */
+body.homepage .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+body.homepage .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6); /* semi-transparent overlay */
+    z-index: 0;
+    border-radius: 16px;
+}
+
+body.homepage .hero-inner {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-img {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+}
+
+/* Hero Button */
+.cta {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #4caf50;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.cta:hover {
+    background: #45a044;
+}
+
+/* ===== PRODUCTS GRID ===== */
+.products {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: #1c1c1c;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.product-card img {
+    width: 40%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.product-card .price {
+    font-size: 22px;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.product-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.product-card .btn:hover {
+    background: #45a044;
+}
+
+/* Best Seller Styling */
+.best {
+    border: 3px solid gold;
+    box-shadow: 0 0 20px gold;
+    transform: scale(1.05);
+    position: relative;
+}
+
+.best::before {
+    content: "BEST SELLER";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: gold;
+    color: black;
+    padding: 6px 12px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+/* ===== FORMS (Contact & Login) ===== */
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2c2c2c;
+    color: white;
+    font-size: 16px;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid #4caf50;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background: #4caf50;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #45a044;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #161616;
+    color: white;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+    }
+
+    form {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+
+/* Logo image styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between logo and text */
+}
+
+.logo img.logo-img {
+    width: 40px;  /* adjust size as needed */
+    height: 40px; /* maintain square logo */
+    object-fit: contain;
+}
+
+/* HERO overlay already exists in your CSS */
+
+/* Benefits section overlay like hero */
+.benefits {
+    position: relative;
+    border-radius: 16px; /* optional, same as hero */
+    padding: 60px 20px;
+    margin: 40px 0;
+}
+
+.benefits::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6); /* semi-transparent black */
+    border-radius: 16px; /* match parent */
+    z-index: 0;
+}
+
+/* Ensure content is above overlay */
+.benefits h2,
+.benefits .benefits-grid,
+.benefits .benefits-grid div {
+    position: relative;
+    z-index: 1;
+}
