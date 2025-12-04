@@ -239,7 +239,7 @@ body.homepage .hero-inner {
 }
 
 .best::before {
-    content: "BEST SELLER";
+    content: "الأكثر مبيعاً";
     position: absolute;
     top: 10px;
     left: 10px;
